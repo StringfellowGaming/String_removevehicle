@@ -7,7 +7,6 @@ author 'Stringfellow_Gaming'
 version '1.0.0'
 
 shared_scripts {
-    '@qbx_core/modules/lib.lua',
     'shared/config.lua'
 }
 

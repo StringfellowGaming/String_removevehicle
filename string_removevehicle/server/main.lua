@@ -116,14 +116,4 @@ RegisterNetEvent('string_removevehicle:removePlayerVehicles', function(targetCit
     end
 end)
 
-lib.callback.register('string_removevehicle:getPlayerVehicles', function(source, citizenid)
-    local vehicles = getPlayerVehicles(citizenid)
-    return vehicles
-end)
-
-lib.callback.register('string_removevehicle:getVehicleInfo', function(source, plate)
-    local result = MySQL.query.await('SELECT * FROM player_vehicles WHERE plate = ?', { plate })
-    return result and result[1] or nil
-end)
-
 print('^2[string_removevehicle] ^7Server script loaded successfully')
